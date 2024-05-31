@@ -2,18 +2,19 @@
 
 
 // ====== USER PARAMS
-declare type CreateUserParams = {
-    clerkId: string;
-    email: string;
-    username: string;
-    firstName: string;
-    lastName: string;
-    photo: string;
-  };
+declare type CreateUserParams= {
+  clerkId: string;
+  email: string;
+  username: string;
+  firstName: string | null; // Allow null for firstName
+  lastName: string | null; // Allow null for lastName
+  photo: string;
+}
+
   
   declare type UpdateUserParams = {
-    firstName: string;
-    lastName: string;
+    firstName: string |null;
+    lastName: string | null;
     username: string;
     photo: string;
   };
